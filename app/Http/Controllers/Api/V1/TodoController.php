@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreTodoRequest;
 use App\Http\Resources\V1\TodoCollection;
 use App\Models\Todo;
 use App\Services\TodoService;
@@ -28,7 +29,7 @@ class TodoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreTodoRequest $request)
     {
         try {
             $this->todoService->create($request->all());
