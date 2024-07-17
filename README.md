@@ -5,7 +5,7 @@
 
     cp .env.example .env
 
-    in .env file add the credentials for the your database 
+    in .env file add the credentials for your database 
 
     php artisan migrate
 
